@@ -21,7 +21,7 @@ namespace HairSalon
       Assert.Equal(firstStylist, secondStylist);
     }
     [Fact]
-    public void Test_Save()
+    public void Stylist_Save_SavesStylistToDatabase()
     {
       Stylist testStylist = new Stylist("Justin Bryden");
       testStylist.Save();
