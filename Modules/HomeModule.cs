@@ -55,6 +55,11 @@ namespace HairSalon
         newClient.Save();
         return View["new-client-success.cshtml", newClient];
       };
+
+      Get["/clients/edit/{id}"] = parameters => {
+        var foundClient = Client.Find(parameters.id);
+        return View["edit-client.cshtml", foundClient];
+      };
     }
   }
 }
