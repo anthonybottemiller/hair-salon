@@ -66,6 +66,16 @@ namespace HairSalon
         foundClient.UpdateName(Request.Form["client-name"]);
         return View["client-updated.cshtml", foundClient];
       };
+
+      Get["/clients/delete/{id}"] = parameters => {
+        var foundClient = Client.Find(parameters.id);
+        return View["delete-client", foundClient];
+      };
+
+      Delete["/clients/delete/{id}"] = parameters => {
+        Client.Delete(parameters.id);
+        return View["client-deleted.cshtml"];
+      };
     }
   }
 }
