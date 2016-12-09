@@ -63,7 +63,7 @@ namespace HairSalon
     }
 
     [Fact]
-    public void Client_Find_FindsStylistInDatabase()
+    public void Client_Find_FindsClientInDatabase()
     {
       Client testClient = new Client("Miranda Gaffeney",2);
       testClient.Save();
@@ -74,7 +74,7 @@ namespace HairSalon
     }
 
     [Fact]
-    public void Client_Delete_DeleteStylistInDatabase()
+    public void Client_Delete_DeleteClientInDatabase()
     {
       Client testClientZero = new Client("Miranda Gaffeney",2);
       testClientZero.Save();
@@ -88,6 +88,19 @@ namespace HairSalon
       Assert.Equal(testList, foundClients);
     }
 
+        [Fact]
+    public void Client_UpdateName_UpdateClientInDatabase()
+    {
+      Client testClient = new Client("Miranda Gaffeney", 2);
+      testClient.Save();
+      string newName = "Miranda H Gaffeney";
+
+      testClient.Update(newName);
+
+      string result = testClient.GetName();
+
+      Assert.Equal(newName, result);
+    }
 
     public void Dispose()
     {
