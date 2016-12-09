@@ -60,6 +60,12 @@ namespace HairSalon
         var foundClient = Client.Find(parameters.id);
         return View["edit-client.cshtml", foundClient];
       };
+
+      Patch["/clients/edit/{id}"] = parameters => {
+        var foundClient = Client.Find(parameters.id);
+        foundClient.UpdateName(Request.Form["client-name"]);
+        return View["client-updated.cshtml", foundClient];
+      };
     }
   }
 }
