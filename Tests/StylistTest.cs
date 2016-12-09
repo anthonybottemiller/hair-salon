@@ -81,7 +81,7 @@ namespace HairSalon
       testStylist.Save();
       string newName = "Justin A Bryden";
 
-      testStylist.Update(newName);
+      testStylist.UpdateName(newName);
 
       string result = testStylist.GetName();
 

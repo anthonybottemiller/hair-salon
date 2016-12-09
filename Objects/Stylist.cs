@@ -118,7 +118,7 @@ namespace HairSalon
     }
   }
 
-  public void Update(string newName)
+  public void UpdateName(string newName)
   {
     SqlConnection connection = DB.Connection();
     connection.Open();
