@@ -32,6 +32,16 @@ namespace HairSalon
         return View["stylist.cshtml", model];
       };
 
+      Get["/clients/new"] = _ => {
+        var stylists = Stylist.GetAll();
+        return View["new-client.cshtml", stylists];
+      };
+
+      Post["/clients"] = _ => {
+        Client newClient = new Client(Request.Form["client-name"], Request.Form["stylist-id"]);
+        newClient.Save();
+        return View["new-client-success.cshtml", newClient];
+      };
     }
   }
 }
