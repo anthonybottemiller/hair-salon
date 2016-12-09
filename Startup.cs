@@ -27,10 +27,6 @@ namespace HairSalon
     {
       return null;
     }
-  public static class DBConfiguration
-    {
-        public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=hair_salon;Integrated Security=SSPI;";
-    }
     public IEnumerable<string> GetDefaultNamespaces()
     {
       return null;
@@ -41,4 +37,8 @@ namespace HairSalon
       get { return false; }
     }
   }
+  public static class DBConfiguration
+    {
+        public static string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=hair_salon;Integrated Security=SSPI;";
+    }
 }
