@@ -1,0 +1,11 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+  <h1>Warning!</h1>
+  <h2>You are about to delete valued employee @Model.GetName()</h2>
+  <h2>Are you sure? This cannot be undone!</h2>
+  <a href="/">NO Take me home!</a>
+  <form action="/stylists/delete/@Model.GetId()" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">Yes delete away!</button>
+  </form>
