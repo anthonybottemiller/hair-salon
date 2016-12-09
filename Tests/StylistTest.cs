@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 
 namespace HairSalon
 {
-  public class HairSalon : IDisposable
+  public class HairSalon
   {
-    public HairSalonTest()
+    public void HairSalonTest()
     {
       DBConfiguration.ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=hair_salon_test;Integrated Security=SSPI;";
     }
@@ -20,9 +20,9 @@ namespace HairSalon
 
       Assert.Equal(firstStylist, secondStylist);
     }
-    public void Dispose()
-    {
-      Stylist.DeleteAll();
-    }
+    // public void Dispose()
+    // {
+    //   Stylist.DeleteAll();
+    // }
   }
 }
