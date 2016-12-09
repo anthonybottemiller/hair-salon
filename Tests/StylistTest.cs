@@ -35,6 +35,20 @@ namespace HairSalon
     }
 
     [Fact]
+    public void Stylist_Save_SavesAssignsIdToObject()
+    {
+      Stylist testStylist = new Stylist("Justin Bryden");
+      testStylist.Save();
+
+      Stylist savedStylist = Stylist.GetAll()[0];
+
+      int result = savedStylist.GetId();
+      int testId = testStylist.GetId();
+
+      Assert.Equal(testId, result);
+    }
+
+    [Fact]
     public void Stylist_Find_FindsStylistInDatabase()
     {
       Stylist testStylist = new Stylist("Justin Bryden");
