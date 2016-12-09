@@ -12,11 +12,26 @@ namespace HairSalon
         List<Stylist> allStylists = Stylist.GetAll();
         return View["index.cshtml", allStylists];
       };
-      Get["/stylist/{id}"] = parameters => {
+
+      Get["/stylists/new"] = _ => {
+        return View["stylist-form.cshtml"];
+      };
+
+      Post["/stylists"] = _ => {
+        Stylist newStylist = new Stylist(Request.Form["stylist-name"]);
+        newStylist.Save();
+        return View["new-stylist-success.cshtml", newStylist];
+      };
+
+      Get["/stylists/{id}"] = parameters => {
+        Dictionary<string, object> model = new Dictionary<string, object>();
         var selectedStylist = Stylist.Find(parameters.id);
         var stylistsClients = selectedStylist.GetClients();
-        return View["stylist.cshtml", stylistsClients];
+        model.Add("stylist", selectedStylist);
+        model.Add("clients", stylistsClients);
+        return View["stylist.cshtml", model];
       };
+
     }
   }
 }
