@@ -11,7 +11,7 @@
       <ul>
       @foreach (var client in Model["clients"])
       {
-        <li>@client.GetName() <a href="/clients/edit/@client.GetId()">Edit</a></li>
+        <li>@client.GetName() <a href="/clients/edit/@client.GetId()">Edit</a> <a href="/clients/delete/@client.GetId()">Delete</a></li>
       }
       </ul>
     }
