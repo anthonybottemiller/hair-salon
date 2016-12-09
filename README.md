@@ -34,7 +34,15 @@ and deletable.
 * Clone repository
 * Using command line change working directory to cloned repository
 * Execute command "dnu restore" in order to resolve project dependencies
-* {SQL Commands}
+* {SQL Commands} 
+create table stylists (id INT IDENTITY, name varchar(255))
+CREATE TABLE clients
+(
+	id INT IDENTITY,
+	stylist_id int,
+	name VARCHAR(255)
+)
+
 * Kestrel
 * Navigate to webserver using your favorite browser
 
