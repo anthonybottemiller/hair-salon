@@ -12,6 +12,7 @@ namespace HairSalon
     {
       DBConfiguration.ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=hair_salon_test;Integrated Security=SSPI;";
     }
+    
     [Fact]
     public void Stylist_Equal_ReturnsTrueIfNamesAreTheSame_True()
     {
@@ -20,6 +21,7 @@ namespace HairSalon
 
       Assert.Equal(firstStylist, secondStylist);
     }
+
     [Fact]
     public void Stylist_Save_SavesStylistToDatabase()
     {
@@ -31,6 +33,7 @@ namespace HairSalon
 
       Assert.Equal(testStylistList, result);
     }
+
     [Fact]
     public void Stylist_Find_FindsStylistInDatabase()
     {
