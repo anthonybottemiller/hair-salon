@@ -30,7 +30,7 @@ and deletable.
 * Internet Access
 * SQL Server
 
-##Installation
+##Installation/Database Scheme
 * Clone repository
 * Using command line change working directory to cloned repository
 * Execute command "dnu restore" in order to resolve project dependencies
