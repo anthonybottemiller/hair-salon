@@ -2,7 +2,7 @@
 
 #####This project leverages the power of SQL to provide facilities dealing with stylist and customer data
 
-#####By Anthony J Bottemiller - 12-8-2016
+#####By Anthony J Bottemiller - 12-9-2016
 
 ##Description
 This project is intended to provide features that a Hair Salon may require.
@@ -28,25 +28,23 @@ and deletable.
 * Mono
 * DVNM Scripts
 * Internet Access
-* SQL server
+* SQL Server
 
 ##Installation
 * Clone repository
 * Using command line change working directory to cloned repository
 * Execute command "dnu restore" in order to resolve project dependencies
-* {SQL Commands} 
-create table stylists (id INT IDENTITY, name varchar(255))
-CREATE TABLE clients
-(
-	id INT IDENTITY,
-	stylist_id int,
-	name VARCHAR(255)
-)
-
-* Kestrel
+* Execute the following commands to create both production and test databases and tables
+* CREATE DATABASE hair_salon;
+* USE hair_salon;
+* CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
+* CREATE TABLE clients (id INT IDENTITY, stylist_id int, name VARCHAR(255));
+* CREATE DATABASE hair_salon_test
+* USE hair_salon_test;
+* CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
+* CREATE TABLE clients (id INT IDENTITY, stylist_id int, name VARCHAR(255));
+* Run "dnx kestrel" from project root
 * Navigate to webserver using your favorite browser
-
-##Specifications
 
 ##Legal
 Copyright (c) 2016 Anthony J Bottemiller
