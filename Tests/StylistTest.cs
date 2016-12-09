@@ -50,7 +50,7 @@ namespace HairSalon
     {
       Stylist testStylistZero = new Stylist("Justin Bryden");
       testStylistZero.Save();
-      Stylist testStylistOne = new Stylist("Jennifer Krause")
+      Stylist testStylistOne = new Stylist("Jennifer Krause");
       testStylistOne.Save();
 
       Stylist.Delete(testStylistZero.GetId());
