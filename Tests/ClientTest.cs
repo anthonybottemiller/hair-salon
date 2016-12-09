@@ -14,6 +14,16 @@ namespace HairSalon
     }
     
     [Fact]
+    public void Test_ClientsEmptyAtFirst()
+    {
+      //Arrange, Act
+      int result = Client.GetAll().Count;
+
+      //Assert
+      Assert.Equal(0, result);
+    }
+
+    [Fact]
     public void Client_Equal_ReturnsTrueIfNamesAreTheSame_True()
     {
       Client firstClient = new Client("Miranda Gaffeney",0);

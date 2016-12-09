@@ -14,6 +14,16 @@ namespace HairSalon
     }
 
     [Fact]
+    public void Test_StylistsEmptyAtFirst()
+    {
+      //Arrange, Act
+      int result = Stylist.GetAll().Count;
+
+      //Assert
+      Assert.Equal(0, result);
+    }
+
+    [Fact]
     public void Stylist_Equal_ReturnsTrueIfNamesAreTheSame_True()
     {
       Stylist firstStylist = new Stylist("Justin Bryden");
