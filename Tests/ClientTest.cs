@@ -95,7 +95,7 @@ namespace HairSalon
       testClient.Save();
       string newName = "Miranda H Gaffeney";
 
-      testClient.Update(newName);
+      testClient.UpdateName(newName);
 
       string result = testClient.GetName();
 
