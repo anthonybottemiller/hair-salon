@@ -1,0 +1,11 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+<div class="container">
+  <h2>New Stylist</h2>
+  <form id="stylist-form" action="/stylists/" method="POST">
+    <label>Stylist Name</label>
+    <input type="text" name="stylist-name">
+    <button type="submit">Submit</button>
+  </form>
+</div>
