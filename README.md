@@ -34,13 +34,19 @@ and deletable.
 Run these commands from PowerShell
 * sqlcmd -S "(localdb)\mssqllocaldb"
 * CREATE DATABASE hair_salon;
+* GO;
 * USE hair_salon;
+* GO;
 * CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
 * CREATE TABLE clients (id INT IDENTITY, stylist_id int, name VARCHAR(255));
+* GO;
 * CREATE DATABASE hair_salon_test
+* GO;
 * USE hair_salon_test;
+* GO;
 * CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
 * CREATE TABLE clients (id INT IDENTITY, stylist_id int, name VARCHAR(255));
+* GO;
 
 ##Installation
 * Clone repository
