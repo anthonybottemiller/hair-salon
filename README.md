@@ -2,7 +2,7 @@
 
 #####This project leverages the power of SQL to provide facilities dealing with stylist and customer data
 
-#####By Anthony J Bottemiller - 12-9-2016
+#####By Anthony J Bottemiller - 12-15-2016
 
 ##Description
 This project is intended to provide features that a Hair Salon may require.
