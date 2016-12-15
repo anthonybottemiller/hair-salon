@@ -14,7 +14,7 @@ namespace HairSalon
         List<Client> allClients = Client.GetAll();
         model.Add("stylists", allStylists);
         model.Add("clients", allClients);
-        return View["index.cshtml", allStylists];
+        return View["index.cshtml", model];
       };
 
       Get["/stylists/new"] = _ => {
