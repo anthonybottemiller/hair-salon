@@ -98,7 +98,7 @@ namespace HairSalon
       Assert.Equal(testList, foundClients);
     }
 
-        [Fact]
+    [Fact]
     public void Client_UpdateName_UpdateClientInDatabase()
     {
       Client testClient = new Client("Miranda Gaffeney", 2);
@@ -112,7 +112,7 @@ namespace HairSalon
       Assert.Equal(newName, result);
     }
 
-        [Fact]
+    [Fact]
     public void Client_UpdateStylistId_UpdateStylistIdForClientInDatabase()
     {
       Client testClient = new Client("Miranda Gaffeney", 2);
@@ -130,6 +130,7 @@ namespace HairSalon
     public void Dispose()
     {
       Client.DeleteAll();
+      Stylist.DeleteAll();
     }
   }
 }
