@@ -18,6 +18,9 @@
       </ul>
     }
     <a href="/stylists/new"><button class="btn btn-success">New Stylist</button></a>
-    <a href="/clients/new"><button class="btn btn-success">New Client</button></a>
+        @if (Model["stylists"].Count > 0)
+        {
+          <a href="/clients/new"><button class="btn btn-success">New Client</button></a>
+        }
   </div>
 </div>
