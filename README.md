@@ -30,11 +30,9 @@ and deletable.
 * Internet Access
 * SQL Server
 
-##Installation/Database Scheme
-* Clone repository
-* Using command line change working directory to cloned repository
-* Execute command "dnu restore" in order to resolve project dependencies
-* Execute the following commands to create both production and test databases and tables
+##Database Setup
+Run these commands from PowerShell
+* sqlcmd -S "(localdb)\mssqllocaldb"
 * CREATE DATABASE hair_salon;
 * USE hair_salon;
 * CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
@@ -43,6 +41,11 @@ and deletable.
 * USE hair_salon_test;
 * CREATE TABLE stylists (id INT IDENTITY, name varchar(255));
 * CREATE TABLE clients (id INT IDENTITY, stylist_id int, name VARCHAR(255));
+
+##Installation
+* Clone repository
+* Using command line change working directory to cloned repository
+* Execute command "dnu restore" in order to resolve project dependencies
 * Run "dnx kestrel" from project root
 * Navigate to webserver using your favorite browser
 
