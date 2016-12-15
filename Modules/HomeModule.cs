@@ -9,7 +9,11 @@ namespace HairSalon
     public HomeModule()
     {
       Get["/"] = _ => {
+        Dictionary<string, object> model = new Dictionary<string, object>();
         List<Stylist> allStylists = Stylist.GetAll();
+        List<Client> allClients = Client.GetAll();
+        model.Add("stylists", allStylists);
+        model.Add("clients", allClients);
         return View["index.cshtml", allStylists];
       };
 
